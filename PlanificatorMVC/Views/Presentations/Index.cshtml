@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PresentationViewModel>
+@{
+    ViewData["Title"] = "Presentations";
+}
+
+<h1>Presentations</h1>
+
+<p>
+    <a asp-action="Create" class="color-action">Create New Presentation</a>
+</p>
+
+<table class="table table-bordered border-white text-white">
+
+    <thead>
+        <tr class="">
+            <th>
+                <!--Html.DisplayNameFor(model => model.Title)-->
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Tags
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+           @foreach (var item in Model)
+            {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShortDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tags)
+                </td>
+                <td>
+
+                    <p class="color-action"><a asp-controller="Presentations" asp-action="Details" asp-route-id="@item.PresentationId" class="color-action">Details</a></p>
+                    <!-- <a asp-action="Edit" asp-route-id="@item.PresentationId">Edit</a> |
+      
+     <a asp-action="Details" asp-route-id="@item.PresentationId">Details</a> |
+     <a asp-action="Delete" asp-route-id="@item.PresentationId">Delete</a> -->
+                </td>
+            </tr>
+            }
+    </tbody>
+</table>

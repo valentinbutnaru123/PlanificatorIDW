@@ -1,0 +1,31 @@
+﻿.bg-customBg {
+
+    background-color: #C70039;
+    color: #ffffff;
+}
+
+.bg-customNavBg {
+    background-color: #ffffff;
+    color: #C70039;
+}
+
+.color-action {
+    color: #F6CC72;
+
+}
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+.btn-color {
+    background-color: #ffffff;
+    color: #C70039;
+}
+.btn-color:hover {
+        background-color: black;
+        color: #ffffff;
+    }
+.log-button:hover {
+    color: #ffffff;
+
+}
